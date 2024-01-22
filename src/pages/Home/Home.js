@@ -166,6 +166,7 @@ export default function Home() {
                 </div>
             </Proposal>
 
+
             <How>
                 <h1>Como funciona ?</h1>
                 <div className="texts">
