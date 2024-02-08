@@ -161,7 +161,7 @@ export default function Home() {
                     </div>
                     <div className="card-text">
                         <img src={Imagination} alt="Imaginação" className="icon" />
-                        <h3>+1200<br></br>RESENHAS</h3>
+                        <h3>+1250<br></br>RESENHAS</h3>
                     </div>
                 </div>
             </Proposal>
