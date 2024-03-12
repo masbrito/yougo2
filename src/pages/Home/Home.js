@@ -149,19 +149,19 @@ export default function Home() {
                 <div className="icons">
                     <div className="card-text">
                         <img src={Ebook} alt="Ebook" className="icon"/>
-                        <h3>+8500<br></br> E-BOOKS</h3>
+                        <h3>+8800<br></br> E-BOOKS</h3>
                     </div>
                     <div className="card-text">
                         <img src={Audiobook} alt="Audiobook" className="icon"/>
-                        <h3>+ 1000<br></br>AUDIOLIVROS</h3>
+                        <h3>+ 1200<br></br>AUDIOLIVROS</h3>
                     </div>
                     <div className="card-text">
                         <img src={Course} alt="Cursos" className="icon" />
-                        <h3>+450<br></br>CURSOS</h3>
+                        <h3>+470<br></br>CURSOS</h3>
                     </div>
                     <div className="card-text">
                         <img src={Imagination} alt="Imaginação" className="icon" />
-                        <h3>+1240<br></br>RESENHAS</h3>
+                        <h3>+1300<br></br>RESENHAS</h3>
                     </div>
                 </div>
             </Proposal>
@@ -285,6 +285,8 @@ export default function Home() {
 
                 </div>
             </Plans>
+            
+            {/*
             <Text>
                 <div className='voucher'>
 
@@ -292,7 +294,7 @@ export default function Home() {
                 <h1>
                 Bônus<br></br>+1 app 
                 </h1>
-                {/*<button><a href="/PasswordForProof">GRÁTIS!</a></button> */}           
+                <button><a href="/PasswordForProof">GRÁTIS!</a></button>         
                 <img src={Tablet} alt="Tablet" className='imgtablet' />
                 </div>
 
@@ -301,13 +303,13 @@ export default function Home() {
                 <img src={Bittrainners} alt="Bittrainners" />
                 <img src={Logo} alt="You Go" />
 
-                </div>
-               
+                </div>              
 
 
                 </div>
                 
-            </Text>
+            </Text> */}
+             
 
             <Doubts>
                 <h1>Dúvidas</h1>
