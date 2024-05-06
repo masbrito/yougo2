@@ -43,7 +43,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {useState, useEffect, useRef} from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import Tablet from '../../assets/tablet.png';
 import Bittrainners from '../../assets/bittrainners.png';
@@ -66,39 +66,39 @@ export default function Home() {
     useEffect(() => {
         // Calcula a largura total do carrossel
         const totalWidth = carousel.current?.scrollWidth - carousel.current?.offsetWidth;
-    
+
         // Inicia a animação com autoplay
         const startAutoplay = async () => {
-          while (true) {
-            await controls.start({ x: -totalWidth });
-            await controls.start({ x: 0 });
-          }
+            while (true) {
+                await controls.start({ x: -totalWidth });
+                await controls.start({ x: 0 });
+            }
         };
-    
+
         setWidth(totalWidth);
         startAutoplay();
-      }, [controls]);
-      
-      const [isHovered, setIsHovered] = useState(false);
+    }, [controls]);
+
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <Container>
             <Header />
-            <Modal>                
-                    {/*<img src={VectorYouGo} alt="Vetor YouGO"/>*/}
-                    {/* <div>
+            <Modal>
+                {/*<img src={VectorYouGo} alt="Vetor YouGO"/>*/}
+                {/* <div>
                     <h1>Desfrute conhecimento ilimitado</h1>
                     <p>Tenha acesso a um acervo digital com +6000 conteúdos!</p>
-    </div>   */}        
-                
-               {/*} <button><a href="/contact">EU QUERO!</a></button>*/}
+    </div>   */}
+
+                {/*} <button><a href="/contact">EU QUERO!</a></button>*/}
 
             </Modal>
             <Text>
-            
-            <div className="swiper">
-            <h1>Desfrute conhecimento ilimitado</h1>
-            <p>Tenha acesso a um acervo digital com +10.000 conteúdos!</p>
+
+                <div className="swiper">
+                    <h1>Desfrute conhecimento ilimitado</h1>
+                    <p>Tenha acesso a um acervo digital com +10.000 conteúdos!</p>
                     <Swiper className='slide'
 
                         slidesPerView={1}
@@ -108,29 +108,29 @@ export default function Home() {
                     >
                         <SwiperSlide>
                             <img src={Livros} alt="Livros" className='item' />
-                        </SwiperSlide>                        
-
-                       
-                       <SwiperSlide
-                       className={isHovered ? 'custom-slide hover' : 'custom-slide'}
-                       onMouseEnter={() => setIsHovered(true)}
-                       onMouseLeave={() => setIsHovered(false)}
-                       >
-                        <a href='/password'>
-                            <img src={Voucher} alt="Livros" className='item'/>
-                        </a>
                         </SwiperSlide>
-                      
+
+
+                        <SwiperSlide
+                            className={isHovered ? 'custom-slide hover' : 'custom-slide'}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                        >
+                            <a href='/password'>
+                                <img src={Voucher} alt="Livros" className='item' />
+                            </a>
+                        </SwiperSlide>
+
 
                         <SwiperSlide>
-                            <img src={Mockupbanner} alt="Livros" className='item'/>
+                            <img src={Mockupbanner} alt="Livros" className='item' />
                         </SwiperSlide>
 
 
-                        
+
                     </Swiper>
                 </div>
-                
+
             </Text>
 
 
@@ -148,12 +148,12 @@ export default function Home() {
 
                 <div className="icons">
                     <div className="card-text">
-                        <img src={Ebook} alt="Ebook" className="icon"/>
-                        <h3>+9600<br></br> E-BOOKS</h3>
+                        <img src={Ebook} alt="Ebook" className="icon" />
+                        <h3>+9900<br></br> E-BOOKS</h3>
                     </div>
                     <div className="card-text">
-                        <img src={Audiobook} alt="Audiobook" className="icon"/>
-                        <h3>+ 1400<br></br>AUDIOLIVROS</h3>
+                        <img src={Audiobook} alt="Audiobook" className="icon" />
+                        <h3>+ 1500<br></br>AUDIOLIVROS</h3>
                     </div>
                     <div className="card-text">
                         <img src={Course} alt="Cursos" className="icon" />
@@ -161,7 +161,7 @@ export default function Home() {
                     </div>
                     <div className="card-text">
                         <img src={Imagination} alt="Imaginação" className="icon" />
-                        <h3>+1400<br></br>RESENHAS</h3>
+                        <h3>+1500<br></br>RESENHAS</h3>
                     </div>
                 </div>
             </Proposal>
@@ -194,18 +194,18 @@ export default function Home() {
                     </div>
                 </div>
 
-                
+
             </How>
             <Text>
                 <div className='carrosel'>
 
-                    <motion.div ref = {carousel} className='carousel' whileTap={{cursor: "grabbing"}}>
+                    <motion.div ref={carousel} className='carousel' whileTap={{ cursor: "grabbing" }}>
                         <motion.div className='inner'
-                        drag='x'
-                        dragConstraints={{right: 0, left: - width }}
-                        initial={{x: 100}}
-                        animate={controls}
-                        transition={{ duration: 30, type: 'tween', ease: 'linear' }}                      
+                            drag='x'
+                            dragConstraints={{ right: 0, left: - width }}
+                            initial={{ x: 100 }}
+                            animate={controls}
+                            transition={{ duration: 30, type: 'tween', ease: 'linear' }}
                         >
                             {capas.map(image => (
                                 <motion.div className='item' key={image}>
@@ -219,7 +219,7 @@ export default function Home() {
                     </motion.div>
                 </div>
             </Text>
-            
+
 
             <Plans>
                 <h1 className="title">Conhecimento digital para o mundo real!</h1>
@@ -238,7 +238,7 @@ export default function Home() {
                             <span className='currency'>R$:</span>
                             <h1 className='center'>69,90</h1>
                             <span className='right'>/Mês</span>
-                    </div>
+                        </div>
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 6 meses.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
@@ -255,7 +255,7 @@ export default function Home() {
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 1 ano.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                       {/*<button><a href="/contact">EU QUERO!</a></button>*/}
+                        {/*<button><a href="/contact">EU QUERO!</a></button>*/}
                     </div>
 
                     <div className="card">
@@ -268,7 +268,7 @@ export default function Home() {
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 18 meses.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                       {/*<button><a href="/contact">EU QUERO!</a></button>*/}
+                        {/*<button><a href="/contact">EU QUERO!</a></button>*/}
                     </div>
                     <div className="card">
                         <h3>PLANO BIANUAL</h3>
@@ -280,12 +280,12 @@ export default function Home() {
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 2 anos.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                       {/*<button><a href="/contact">EU QUERO!</a></button>*/}
+                        {/*<button><a href="/contact">EU QUERO!</a></button>*/}
                     </div>
 
                 </div>
             </Plans>
-            
+
             {/*
             <Text>
                 <div className='voucher'>
@@ -309,7 +309,7 @@ export default function Home() {
                 </div>
                 
             </Text> */}
-             
+
 
             <Doubts>
                 <h1>Dúvidas</h1>
