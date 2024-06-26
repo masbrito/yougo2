@@ -50,12 +50,7 @@ import Bittrainners from '../../assets/bittrainners.png';
 import Supercomics from '../../assets/supercomics.png';
 import Logo from '../../assets/logoyougo.png';
 
-
-
-
-
 const capas = [capa1, capa2, capa3, capa4, capa5, capa6]
-
 
 export default function Home() {
 
@@ -133,9 +128,6 @@ export default function Home() {
 
             </Text>
 
-
-
-
             <Proposal>
                 <p><i>Bem vindo a YouGo!</i></p>
                 <h1>Tenha uma <span style={{ color: "#9300A0" }}>experiência única de aprendizado</span> com o nosso APP!</h1>
@@ -149,7 +141,7 @@ export default function Home() {
                 <div className="icons">
                     <div className="card-text">
                         <img src={Ebook} alt="Ebook" className="icon" />
-                        <h3>+11.300<br></br> E-BOOKS</h3>
+                        <h3>+11.500<br></br> E-BOOKS</h3>
                     </div>
                     <div className="card-text">
                         <img src={Audiobook} alt="Audiobook" className="icon" />
