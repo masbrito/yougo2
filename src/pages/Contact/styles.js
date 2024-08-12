@@ -63,7 +63,7 @@ export const Forms = styled.div`
     padding: 5px 0px 40px 0px;
 
     .card {
-        /* background-color: #F5F5F5; */
+    
         background-image: linear-gradient(to bottom, #9300A0, #CB20DA);
         color: #FFF;
         width: 70%;
@@ -74,6 +74,7 @@ export const Forms = styled.div`
 
         h2 {
             padding: 10px 0;
+            text-align: center;
 
             @media(max-width: 700px) {
                 padding: 0px;
@@ -83,13 +84,17 @@ export const Forms = styled.div`
 
         .info {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            
 
-            input {
+            input{
                 border: none;
-                width: 100%;
-                padding: 10px 15px;
+                width: 90%;
+                height: 35px;
+                padding: 8px 8px;
                 outline: none;
-                margin: 15px;
+                margin: 10px;
                 border-radius: 5px;
             }
         }
@@ -99,24 +104,29 @@ export const Forms = styled.div`
             justify-content: center;
 
             textarea {
+                height: 35px;
                 border: none;
+                padding: 8px 8px;
+                margin: 10px;
                 outline: none;
-                width: 100%;
+                width: 90%;
                 border-radius: 5px;
+                resize: none;
             }
         }
 
         button {
             width: 40%;
-            margin-top: 20px;
+             margin: 20px auto;
             border: none;
             background-color: #28CA50;
             padding: 10px 20px;
             color: #F5F5F5;
             font-weight: 600;
             font-size: 16px;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
+            display: block;
 
             
             @media(max-width: 700px) {

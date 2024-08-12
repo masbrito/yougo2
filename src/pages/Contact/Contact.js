@@ -71,7 +71,6 @@ export default function Contact() {
                     <div className="card">
                         <h2>Formulário de Contato</h2>
                         <div className="info">
-
                             <input 
                             type="text" 
                             placeholder="Seu Nome ..."
@@ -85,10 +84,8 @@ export default function Contact() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             />
-
-                            
-                            
-                        </div>
+                            </div>
+                       
                         <div className="textarea">
                             <textarea id="w3review" name="w3review" rows="4" cols="90"                            
                             placeholder="Deixe um comentário ..."
