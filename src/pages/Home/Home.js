@@ -90,7 +90,6 @@ export default function Home() {
 
             </Modal>
             <Text>
-
                 <div className="swiper">
                     <h1>Desfrute conhecimento ilimitado</h1>
                     <p>Tenha acesso a um acervo digital com +10.000 conteúdos!</p>
@@ -163,25 +162,21 @@ export default function Home() {
                 <h1>Como funciona ?</h1>
                 <div className="texts">
                     <div className="text">
-                        <h2>1.</h2>
-                        <h3>Assine o nossos plano</h3>
+                        <h2>1. Assine o nosso plano</h2>
                         <p>Escolha o plano visitando um dos nossos pontos de venda</p>
                     </div>
                     <div className="text">
-                        <h2>2.</h2>
-                        <h3>Baixe nosso aplicativo</h3>
+                        <h2>2. Baixe nosso aplicativo</h2>
                         <p>Acesse a loja de aplicativos do seu celular e baixe o nosso APP</p>
                     </div>
                 </div>
                 <div className="texts">
                     <div className="text">
-                        <h2>3.</h2>
-                        <h3>Faça o login</h3>
+                        <h2>3. Faça o login</h2>
                         <p>Entre com o seu usuário e senha</p>
                     </div>
                     <div className="text">
-                        <h2>4.</h2>
-                        <h3>Acesse o melhor conteúdo</h3>
+                        <h2>4. Acesse o conteúdo</h2>
                         <p>Ouça e leia resenhas, aprenda uma nova habilidade com os nossos cursos e ebooks</p>
                     </div>
                 </div>

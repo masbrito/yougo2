@@ -34,7 +34,9 @@ export const Modal = styled.div`
     .swiper{
         max-width: 90%;
         padding: 20px 5px;    
-        background-color: red;           
+             
+        
+        
     }   
 
     img {
@@ -116,7 +118,7 @@ export const Proposal = styled.div`
         width: 100%;
         padding: 0px;
     }
-    
+        
 
     .icons {
     display: grid;
@@ -124,9 +126,10 @@ export const Proposal = styled.div`
     gap: 15px;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 20px 0px;
+    background-color: #ffffff;
 
     @media (max-width: 768px) {
         flex-direction: column; 
@@ -139,7 +142,7 @@ export const Proposal = styled.div`
         .card-text {
             text-align: center;
             background-color: #9300A0;
-            border-radius: 15px;
+            border-radius: 10px;
             width: 100%;
             padding: 0px;
             margin: 0 auto;
@@ -177,7 +180,7 @@ export const Proposal = styled.div`
           .icon {
             display: block;
             @media (max-width: 768px) {
-              display: none;
+              
             }
           }
           
@@ -196,7 +199,7 @@ export const Proposal = styled.div`
             }
         }
         .mockup{
-            width: 60%;
+            width: 100%;
             padding: 0px;
             margin: 0 auto;
         } 
@@ -208,7 +211,7 @@ export const Proposal = styled.div`
 export const How = styled.div`
     background-image: linear-gradient(to bottom, #9300A0, #CB20DA);
     width: 60%;      
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 0 auto;
     padding: 10px 50px;
     color: #FFF;
@@ -217,6 +220,7 @@ export const How = styled.div`
     @media (max-width: 768px){
         width: 77%;
         padding: 40px;
+
     
     }  
        
@@ -242,22 +246,15 @@ export const How = styled.div`
         }
     }
 
-    .text {     
+    .text { 
         
         width: 35%;
         padding: 20px;
         
         @media (max-width: 768px) {
            padding: 0px;
-           width: 100%;    
-        } 
-               
-        h2,h3 {
-            display: inline-block;
-        }
-        
-        h1 {
-            margin-right: 1px;
+           width: 100%;
+           margin-bottom: 15px;  
         }
         
     }
@@ -322,12 +319,13 @@ export const Text = styled.div`
 display:flex;
 border-radius: 5%;
 width: 100%;
-max-width: 900px;
-margin: 20px auto 0;
+max-width: 1000px;
+margin: 10px auto;
 margin-bottom: 0px;
-min-height: 80vh;
+min-height: 40vh;
 align-items: center;
 justify-content: center;
+
 }
 
 .inner{
@@ -336,7 +334,7 @@ justify-content: center;
 }
 
 .item{
-    min-height: 100px;
+    min-height: 200px;
     min-width: 200px;
     padding: 10px;
     
@@ -353,6 +351,7 @@ justify-content: center;
 .carousel{
     cursor: grab;
     overflow: hidden;
+    
 }
 /*Sessão do voucher*/
 
