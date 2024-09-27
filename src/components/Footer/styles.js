@@ -92,4 +92,8 @@ export const FooterD = styled.footer`
           
           
     }
+        a {
+                text-decoration: none;
+                
+            }
 `;

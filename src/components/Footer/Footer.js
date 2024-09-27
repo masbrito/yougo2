@@ -69,7 +69,7 @@ export default function Footer() {
                     <a href="https://www.threads.net/@yougoappoficial?igshid=MzRlODBiNWFlZA=="><img src={threads} alt="Icone" width="20" height="20"/></a>*/}
                     
                 </div>
-                <p>Termos de Serviço e Privacidade</p>
+                <a href="/termos">Termos de Serviço e Privacidade</a>
             </div>
         </FooterD>
     );

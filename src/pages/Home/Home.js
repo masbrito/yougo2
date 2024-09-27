@@ -148,11 +148,11 @@ export default function Home() {
                     </div>
                     <div className="card-text">
                         <img src={Course} alt="Cursos" className="icon" />
-                        <h3>+580<br></br>CURSOS</h3>
+                        <h3>+600<br></br>CURSOS</h3>
                     </div>
                     <div className="card-text">
                         <img src={Imagination} alt="Imaginação" className="icon" />
-                        <h3>+1.800<br></br>RESENHAS</h3>
+                        <h3>+2.000<br></br>RESENHAS</h3>
                     </div>
                 </div>
             </Proposal>

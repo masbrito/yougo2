@@ -8,6 +8,7 @@ import About from "./pages/AboutUs/About";
 import Reading from "./pages/ProofReading/Reading";
 import Tutorial from "./pages/TutorialAccess/Tutorial";
 import PasswordCard from "./pages/PasswordForProof/PasswordCard";
+import Termos from "./pages/Termos/Termos";
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/proof-reading" element={<Reading/>} />
         <Route path="/tutorial-access" element={<Tutorial/>} />
         <Route path="/password" element={<PasswordCard/>} />
+        <Route path="/termos" element={<Termos/>} />
       </Routes>
     </Router>
   );
