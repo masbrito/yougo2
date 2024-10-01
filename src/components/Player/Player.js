@@ -30,6 +30,7 @@ const DisplayTrack = ({ currentTrack, audioRef, setDuration, progressBarRef }) =
                 onLoadedMetadata={onLoadedMetadata}                
                 
             />
+            
             <div className="audio-info">
                 <div className="audio-image">
                 {currentTrack.thumbnail ? (

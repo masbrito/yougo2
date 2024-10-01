@@ -1,14 +1,27 @@
 import React from "react";
-import { useState, useRef  } from "react";
+import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
-
 import { Container, Destribution } from "./styles";
 
-//import Player from "../../components/Player/Player";
-
 import HeadPhone from "./assets/headphone.png";
+import Cafe from "./assets/cafe.png";
+import ComoAprender from "./assets/ingles.png";
+import ComoSuperar from "./assets/ansiedade.png";
+import Detox from "./assets/detox.png";
+import DicasSaude from "./assets/dicassaude.png";
+import Meditacao from "./assets/meditacao.png";
+import Mindset from "./assets/mindset.png";
+
+import Cafe2 from "./ebooks/Cafe-da-manha-Receitas-fitness.pdf";
+import ComoAprender2 from "./ebooks/Como-Aprender-Ingles-Com-Musicas.pdf";
+import ComoSuperar2 from "./ebooks/Como-superar-a-ansiedade.pdf";
+import Detox2 from "./ebooks/Detox-Natural.pdf";
+import DicasSaude2 from "./ebooks/Dicas-de-Saude-Comprovadas-PT.pdf";
+import Meditacao2 from "./ebooks/Dicas-de-Saude-Comprovadas-PT.pdf";
+import Mindset2 from "./ebooks/Mindset.pdf";
 
 import Antifragil from "../../data/assets/antifragil.png";
 import Comece from "../../data/assets/comece.png";
@@ -18,6 +31,7 @@ import Ossegredos from "../../data/assets/ossegredos.png";
 import Outlander from "../../data/assets/Outlander.png";
 import Quemevoce from "../../data/assets/Quemevoce.png";
 import Stevejobs from "../../data/assets/stevejobs.png";
+
 import antifragil from "../../data/audios/antifragil.mp3";
 import comece from "../../data/audios/comece.mp3";
 import contagio from "../../data/audios/contagio.mp3";
@@ -27,71 +41,65 @@ import outlander from "../../data/audios/outlander.mp3";
 import quem from "../../data/audios/quem.mp3";
 import steve from "../../data/audios/steve.mp3";
 
-
-
-
 export default function Reading() {
-    const [isPlaying, setIsPlaying] = useState({
-        antifragil: false,
-        comece: false,
-        contagio: false,
-        opoder: false,
-        ossegredos: false,
-        oulander: false,
-        quem: false,
-        steve: false,
-        // ... (add other states)
-      });
-    const audioRefs = {
-        antifragil: useRef(null),
-        comece: useRef(null),
-        contagio: useRef(null),
-        opoder: useRef(null),
-        ossegredos: useRef(null),
-        outlander: useRef(null),
-        quem: useRef(null),
-        steve: useRef(null),
-        // ... (add other refs)
-      };
-    
+  const [isPlaying, setIsPlaying] = useState({
+    antifragil: false,
+    comece: false,
+    contagio: false,
+    opoder: false,
+    ossegredos: false,
+    oulander: false,
+    quem: false,
+    steve: false,
+  });
 
-      const handleTogglePlay = (audioKey) => {
-        const audio = audioRefs[audioKey].current;
+  const audioRefs = {
+    antifragil: useRef(null),
+    comece: useRef(null),
+    contagio: useRef(null),
+    opoder: useRef(null),
+    ossegredos: useRef(null),
+    outlander: useRef(null),
+    quem: useRef(null),
+    steve: useRef(null),
+  };
 
-        // Pause currently playing audio
+  const handleTogglePlay = (audioKey) => {
+    const audio = audioRefs[audioKey].current;
+
     Object.keys(audioRefs).forEach((key) => {
-        if (key !== audioKey && isPlaying[key]) {
-          audioRefs[key].current.pause();
-          setIsPlaying((prevIsPlaying) => ({ ...prevIsPlaying, [key]: false }));
-        }
-      });
-    
-        if (audio) {
-          if (isPlaying[audioKey]) {
-            audio.pause();
-          } else {
-            audio.play();
-          }
-    
-          setIsPlaying((prevIsPlaying) => ({
-            ...prevIsPlaying,
-            [audioKey]: !prevIsPlaying[audioKey],
-          }));
-        }
-      };
-    
-    return(
-        <Container>
-            <Header />
+      if (key !== audioKey && isPlaying[key]) {
+        audioRefs[key].current.pause();
+        setIsPlaying((prevIsPlaying) => ({ ...prevIsPlaying, [key]: false }));
+      }
+    });
 
-            <Destribution>
+    if (audio) {
+      if (isPlaying[audioKey]) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
 
-                <div className="text-sup">
-                    <img src={HeadPhone} alt="Head Phone"/>
-                    <h2>Sinta a experiência de fazer parte do nosso universo!</h2>
-                </div>
+      setIsPlaying((prevIsPlaying) => ({
+        ...prevIsPlaying,
+        [audioKey]: !prevIsPlaying[audioKey],
+      }));
+    }
+  };
 
-                <div className="container images">
+  return (
+    <Container>
+      <Header />
+
+      <Destribution>
+        <div className="text-sup">
+          <img src={HeadPhone} alt="Head Phone" />
+          <h1>Sinta a experiência de fazer parte do nosso universo!</h1>
+        </div>
+        <h1 className="text-sup">Resenhas</h1>
+
+        <div className="container images">
           {[
             { key: "antifragil", img: Antifragil, audio: antifragil },
             { key: "comece", img: Comece, audio: comece },
@@ -101,27 +109,46 @@ export default function Reading() {
             { key: "outlander", img: Outlander, audio: outlander },
             { key: "quem", img: Quemevoce, audio: quem },
             { key: "steve", img: Stevejobs, audio: steve },
-
-            // ... (add other objects for each image)
           ].map((item) => (
             <div className="audio-container" key={item.key}>
               <img src={item.img} alt={`Capa ${item.key}`} />
-              <audio src={item.audio} ref={audioRefs[item.key]} className="audio-element"></audio>
-              <button onClick={() => handleTogglePlay(item.key)} className="play-pause-button">
+              <audio
+                src={item.audio}
+                ref={audioRefs[item.key]}
+                className="audio-element"
+              ></audio>
+              <button
+                onClick={() => handleTogglePlay(item.key)}
+                className="play-pause-button"
+              >
                 {isPlaying[item.key] ? "⏸️" : "▶️"}
               </button>
             </div>
           ))}
         </div>
 
-                {/*<div className="card-container">
-                    <div className="card-player">
-                        <Player/>
-                    </div>
-                </div>*/}
-            </Destribution>
+        <h1 className="text-sup">E-books</h1>
 
-            <Footer />
-        </Container>
-    );
-};
+        <div className="container images">
+          {[
+            { key: "Cafe", img: Cafe },
+            { key: "ComoAprender", img: ComoAprender },
+            { key: "ComoSuperar", img: ComoSuperar },
+            { key: "Detox", img: Detox },
+            { key: "DicasSaude", img: DicasSaude },
+            { key: "Meditacao", img: Meditacao },
+            { key: "Mindset", img: Mindset },
+          ].map((item) => (
+            <div className="audio-container" key={item.key}>
+              <a href={`/pdf/${item.key}`} className="pdf-link">
+                <img src={item.img} alt={`Capa ${item.key}`} />
+              </a>
+            </div>
+          ))}
+        </div>
+      </Destribution>
+
+      <Footer />
+    </Container>
+  );
+}
