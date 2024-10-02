@@ -1,105 +1,18 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    /* color: #606060; */
-`;
-
-export const Destribution = styled.div`
-    background-image: linear-gradient(to bottom, #9300A0, #CB20DA);
-
-    .audio-container {
-        position: relative;
-        display: inline-block; /* Isso garante que o áudio não quebrará para a próxima linha */
-    }
-    
-    .play-pause-button {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        
-    }
-    .audio-element {
-        display: none; /* Esconda o elemento de áudio */
-        
-    }
-    
-    
-
-    .text-sup {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 20px;     
-
-        @media (max-width: 768px) {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        img {         
-            width: 20%;
-            border-radius: 15px;  
-               
-
-            @media (max-width: 768px) {
-                width: 50%;
-                padding: 10px;
-            }
-        }
-
-        h1 {
-            color: #FFF;
-        }
-    }
-        
-
-    .card-container {
-        padding: 5px 0px;
-        
-
-        .card-player {
-            margin: 5px auto;
-            background-color: #FFF;
-            padding: 10px;
-            width: 30%;
-            text-align: center;
-            border-radius: 20px;
-            
-
-            @media (max-width: 768px) {
-                width: 70%;
-            }
-        }
-    }
-       
-
-    .container {
-        width: 90%;
-        margin: 0 auto;
-        text-align: center;      
-        
-
-        img {        
-            margin: 10px 5px;
-            border-radius: 15px;
-        }
-            
-        
-    }
-        h1 {
-            color: #FFF;
-        }
-            
-       
-         
-
-        
+export const PdfContainer = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Permite rolagem vertical */
+  background-color: white; /* Pode mudar conforme seu design */
+  padding: 10px; /* Espaço em volta do PDF */
+  
+  canvas {
+    max-width: 100%;
+    height: auto; /* Isso manterá a proporção do canvas */
+    margin-bottom: 20px; /* Espaço entre as páginas */
+  }
 `;

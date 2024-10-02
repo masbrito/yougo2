@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useState, useRef } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-
 import { Container, Destribution } from "./styles";
 
+// Assets
 import HeadPhone from "./assets/headphone.png";
 import Cafe from "./assets/cafe.png";
 import ComoAprender from "./assets/ingles.png";
@@ -14,14 +13,6 @@ import Detox from "./assets/detox.png";
 import DicasSaude from "./assets/dicassaude.png";
 import Meditacao from "./assets/meditacao.png";
 import Mindset from "./assets/mindset.png";
-
-import Cafe2 from "./ebooks/Cafe-da-manha-Receitas-fitness.pdf";
-import ComoAprender2 from "./ebooks/Como-Aprender-Ingles-Com-Musicas.pdf";
-import ComoSuperar2 from "./ebooks/Como-superar-a-ansiedade.pdf";
-import Detox2 from "./ebooks/Detox-Natural.pdf";
-import DicasSaude2 from "./ebooks/Dicas-de-Saude-Comprovadas-PT.pdf";
-import Meditacao2 from "./ebooks/Dicas-de-Saude-Comprovadas-PT.pdf";
-import Mindset2 from "./ebooks/Mindset.pdf";
 
 import Antifragil from "../../data/assets/antifragil.png";
 import Comece from "../../data/assets/comece.png";
@@ -32,6 +23,7 @@ import Outlander from "../../data/assets/Outlander.png";
 import Quemevoce from "../../data/assets/Quemevoce.png";
 import Stevejobs from "../../data/assets/stevejobs.png";
 
+// Audios
 import antifragil from "../../data/audios/antifragil.mp3";
 import comece from "../../data/audios/comece.mp3";
 import contagio from "../../data/audios/contagio.mp3";
@@ -48,7 +40,7 @@ export default function Reading() {
     contagio: false,
     opoder: false,
     ossegredos: false,
-    oulander: false,
+    outlander: false,
     quem: false,
     steve: false,
   });
@@ -67,6 +59,7 @@ export default function Reading() {
   const handleTogglePlay = (audioKey) => {
     const audio = audioRefs[audioKey].current;
 
+    // Pause any other playing audio
     Object.keys(audioRefs).forEach((key) => {
       if (key !== audioKey && isPlaying[key]) {
         audioRefs[key].current.pause();
@@ -74,6 +67,7 @@ export default function Reading() {
       }
     });
 
+    // Toggle the clicked audio
     if (audio) {
       if (isPlaying[audioKey]) {
         audio.pause();
@@ -99,6 +93,7 @@ export default function Reading() {
         </div>
         <h1 className="text-sup">Resenhas</h1>
 
+        {/* Audio books section */}
         <div className="container images">
           {[
             { key: "antifragil", img: Antifragil, audio: antifragil },
@@ -116,7 +111,7 @@ export default function Reading() {
                 src={item.audio}
                 ref={audioRefs[item.key]}
                 className="audio-element"
-              ></audio>
+              />
               <button
                 onClick={() => handleTogglePlay(item.key)}
                 className="play-pause-button"
@@ -129,6 +124,7 @@ export default function Reading() {
 
         <h1 className="text-sup">E-books</h1>
 
+        {/* PDF ebooks section */}
         <div className="container images">
           {[
             { key: "Cafe", img: Cafe },
@@ -140,9 +136,9 @@ export default function Reading() {
             { key: "Mindset", img: Mindset },
           ].map((item) => (
             <div className="audio-container" key={item.key}>
-              <a href={`/pdf/${item.key}`} className="pdf-link">
+              <Link to={`/pdf/${item.key}`}>
                 <img src={item.img} alt={`Capa ${item.key}`} />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

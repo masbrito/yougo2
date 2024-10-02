@@ -27,6 +27,7 @@ function App() {
         <Route path="/password" element={<PasswordCard/>} />
         <Route path="/termos" element={<Termos/>} />
         <Route path="/pdf/:pdfName" element={<PdfViewer />} />
+        
       </Routes>
     </Router>
   );
