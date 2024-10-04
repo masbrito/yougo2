@@ -7,7 +7,7 @@ export const HeaderD = styled.header`
     align-items: center;
     background-color: #5E0066;
     padding: 0px 0px;
-    font-weight: 400; 
+    font-weight: 400;
        
     @media (max-width: 768px) {
         flex-direction: column; 
@@ -15,14 +15,15 @@ export const HeaderD = styled.header`
         margin: 0 auto;
         align-items: center;       
                  
-    }
+    }       
 
     img {
-        width: 15%;
+        width: 200px;
         height: auto;
         padding: 0px 0px;
     
         @media (max-width: 768px) {
+            display: flex; 
             width: 40%;
             height: auto;
             margin: 0 auto;

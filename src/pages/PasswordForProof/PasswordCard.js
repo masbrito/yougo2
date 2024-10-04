@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import Header from "../../components/Header/Header";
 import { Container, Password } from "./styles";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function PasswordCard() {
     const [password, setPassword] = useState('');
@@ -24,7 +24,7 @@ export default function PasswordCard() {
                     <p>Entre com a senha que lhe informaram.</p>
                     <input type="password" placeholder="ENTRAR COM A SUA SENHA" onChange={(e) => setPassword(e.target.value)}/>
                     <button onClick={handleButton}>ACESSAR</button>
-                    <a href="/">Voltar para o Início</a>
+                    <Link to="/">Voltar para o Início</Link>
                 </div>
             </Password>
         </Container>

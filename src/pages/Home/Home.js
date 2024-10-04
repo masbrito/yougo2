@@ -1,12 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Container, Modal, Proposal, How, Plans, Doubts, Avaliation, Text } from "./styles";
-
-// import { Books } from "@styled-icons/icomoon/Books";
-// import { HeadphonesSoundWave } from "@styled-icons/fluentui-system-filled/HeadphonesSoundWave";
-// import { LearningApp } from "@styled-icons/fluentui-system-filled/LearningApp";
-// import { RateReview } from "@styled-icons/material-sharp/RateReview";
+import { Container, Proposal, How, Plans, Doubts, Avaliation, Text } from "./styles";
 
 import Audiobook from "./assets/Audiobook-amico.png";
 import Course from "./assets/Course.png";
@@ -17,14 +12,9 @@ import Voucher from "../../assets/voucher.PNG";
 import Mockupbanner from "../../assets/mockupbanner.png";
 import Mockupcelular from "../../assets/mockupcllr.png";
 
-
-
-import Mockup from "../../assets/mockupmao.png";
 import star_icon from "../../assets/star_icon.png";
 import client from "../../assets/novacliente.png";
 import clientSecond from "../../assets/novacliente1.png";
-import Experiencia from '../../assets/experiencia.png';
-import Experienciatwo from '../../assets/experiencia2.png';
 
 import CardDropdownComp from "../../components/CardDropdown/CardDropdown";
 import { Check } from "@styled-icons/boxicons-regular/Check";
@@ -36,19 +26,12 @@ import capa4 from '../../assets/capa4.png';
 import capa5 from '../../assets/capa5.png';
 import capa6 from '../../assets/capa6.png';
 
-//register();
-import { register } from 'swiper/element/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useState, useEffect, useRef } from 'react';
-
-import Tablet from '../../assets/tablet.png';
-import Bittrainners from '../../assets/bittrainners.png';
-import Supercomics from '../../assets/supercomics.png';
-import Logo from '../../assets/logoyougo.png';
+import { useState, useRef } from 'react';
 
 const capas = [capa1, capa2, capa3, capa4, capa5, capa6]
 
@@ -58,52 +41,24 @@ export default function Home() {
     const controls = useAnimation();
     const [width, setWidth] = useState(0);
 
-    useEffect(() => {
-        // Calcula a largura total do carrossel
-        const totalWidth = carousel.current?.scrollWidth - carousel.current?.offsetWidth;
-
-        // Inicia a animação com autoplay
-        const startAutoplay = async () => {
-            while (true) {
-                await controls.start({ x: -totalWidth });
-                await controls.start({ x: 0 });
-            }
-        };
-
-        setWidth(totalWidth);
-        startAutoplay();
-    }, [controls]);
-
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <Container>
             <Header />
-            <Modal>
-                {/*<img src={VectorYouGo} alt="Vetor YouGO"/>*/}
-                {/* <div>
-                    <h1>Desfrute conhecimento ilimitado</h1>
-                    <p>Tenha acesso a um acervo digital com +6000 conteúdos!</p>
-    </div>   */}
-
-                {/*} <button><a href="/contact">EU QUERO!</a></button>*/}
-
-            </Modal>
             <Text>
                 <div className="swiper">
                     <h1>Desfrute conhecimento ilimitado</h1>
                     <p>Tenha acesso a um acervo digital com +10.000 conteúdos!</p>
                     <Swiper className='slide'
-
                         slidesPerView={1}
                         pagination={{ clickable: true }}
                         navigation
-                        autoplay={{ delay: 4000 }}
+                        autoplay={{ delay: 2000 }}
                     >
                         <SwiperSlide>
                             <img src={Livros} alt="Livros" className='item' />
                         </SwiperSlide>
-
 
                         <SwiperSlide
                             className={isHovered ? 'custom-slide hover' : 'custom-slide'}
@@ -115,26 +70,16 @@ export default function Home() {
                             </a>
                         </SwiperSlide>
 
-
                         <SwiperSlide>
                             <img src={Mockupbanner} alt="Livros" className='item' />
                         </SwiperSlide>
-
-
-
                     </Swiper>
                 </div>
-
             </Text>
 
             <Proposal>
                 <p><i>Bem vindo a YouGo!</i></p>
                 <h1>Tenha uma <span style={{ color: "#9300A0" }}>experiência única de aprendizado</span> com o nosso APP!</h1>
-
-                {/*<div className='experiencia'>
-                    <img src={Experiencia} alt="Audiobook" className="icon" />
-                    <img src={Experienciatwo} alt="Audiobook" className="icon2" />
-                </div>*/}
                 <img src={Mockupcelular} alt="Audiobook" className="mockup" />
 
                 <div className="icons">
@@ -156,7 +101,6 @@ export default function Home() {
                     </div>
                 </div>
             </Proposal>
-
 
             <How>
                 <h1>Como funciona ?</h1>
@@ -180,45 +124,38 @@ export default function Home() {
                         <p>Ouça e leia resenhas, aprenda uma nova habilidade com os nossos cursos e ebooks</p>
                     </div>
                 </div>
-
-
             </How>
+
             <Text>
                 <div className='carrosel'>
-
                     <motion.div ref={carousel} className='carousel' whileTap={{ cursor: "grabbing" }}>
                         <motion.div className='inner'
                             drag='x'
                             dragConstraints={{ right: 0, left: - width }}
-                            initial={{ x: 100 }}
-                            animate={controls}
-                            transition={{ duration: 30, type: 'tween', ease: 'linear' }}
+                            initial={{ x: "100%" }}
+                            animate={{ x: "-100%" }}
+                            transition={{
+                                x: {
+                                    repeate: Infinity,
+                                    repeateType: "loop",
+                                    duration: 20,
+                                    ease: "linear"
+                                }
+                            }}
                         >
                             {capas.map(image => (
                                 <motion.div className='item' key={image}>
                                     <img src={image} alt='texto alt'></img>
-
                                 </motion.div>
                             ))}
-
                         </motion.div>
-
                     </motion.div>
                 </div>
             </Text>
 
-
             <Plans>
                 <h1 className="title">Conhecimento digital para o mundo real!</h1>
                 <div className="container">
-                    {/*<div className="card second-card">
-                        <h3>Plano Semestral</h3>
-                        <h2>6x</h2>
-                        <h1>R$ 129,90</h1>
-                        <p><Check width="30px" style={{color:"#CA60C6"}}/>Acesso ao conteúdo por 6 meses.</p>
-                        <p><Check width="30px" style={{color:"#CA60C6"}}/>Suporte especializado.</p>
-                        
-    </div>*/}
                     <div className="card">
                         <h3>PLANO SEMESTRAL</h3>
                         <div className='left'>
@@ -229,7 +166,6 @@ export default function Home() {
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 6 meses.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                        {/*<button><a href="/contact">EU QUERO!</a></button>*/}
                     </div>
 
                     <div className="card">
@@ -242,7 +178,6 @@ export default function Home() {
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 1 ano.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                        {/*<button><a href="/contact">EU QUERO!</a></button>*/}
                     </div>
 
                     <div className="card">
@@ -255,7 +190,6 @@ export default function Home() {
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 18 meses.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                        {/*<button><a href="/contact">EU QUERO!</a></button>*/}
                     </div>
                     <div className="card">
                         <h3>PLANO BIANUAL</h3>
@@ -267,36 +201,9 @@ export default function Home() {
 
                         <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 2 anos.</p>
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                        {/*<button><a href="/contact">EU QUERO!</a></button>*/}
                     </div>
-
                 </div>
             </Plans>
-
-            {/*
-            <Text>
-                <div className='voucher'>
-
-                <div className='tablet'>
-                <h1>
-                Bônus<br></br>+1 app 
-                </h1>
-                <button><a href="/PasswordForProof">GRÁTIS!</a></button>         
-                <img src={Tablet} alt="Tablet" className='imgtablet' />
-                </div>
-
-                <div className='parceiros'>
-                <img src={Supercomics} alt="Supercomics" />
-                <img src={Bittrainners} alt="Bittrainners" />
-                <img src={Logo} alt="You Go" />
-
-                </div>              
-
-
-                </div>
-                
-            </Text> */}
-
 
             <Doubts>
                 <h1>Dúvidas</h1>
@@ -324,10 +231,7 @@ export default function Home() {
                         <p> Eu sou apaixonado pelas resenhas críticas, a facilidade de ouvir de qualquer lugar me encantou! Encontro resenha de vários best sellers que estavam na minha lista de livros, porém não conseguia ler por falta de tempo!</p>
                     </div>
                 </div>
-
-
             </Avaliation>
-
             <Footer />
         </Container>
     );
