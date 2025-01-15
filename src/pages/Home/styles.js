@@ -261,6 +261,30 @@ export const How = styled.div`
 `;
 export const Text = styled.div`
 
+.precoprodutos{
+    padding-bottom: 25px;
+}
+.lista{
+    justify-content: center;
+    font-size: 16px;
+    display:flex;
+    padding: 10px;
+    margin: 0 auto;
+    gap: 30px;
+    border: 2px solid #9300A0;
+    border-radius: 8px;
+    width: fit-content;
+    width: 73%;
+    
+
+    @media (max-width: 768px) {
+    font-size: 12px;
+    display: grid;
+    line-height: 0;
+    
+  }
+}
+
 .swiper{
     background-color: #9300A0;
     width: 100%; /* Largura da imagem */
@@ -569,6 +593,7 @@ text-align: center;
         }
     }
 `;
+
 
 export const Doubts = styled.div`
     /* background-color: #CA60C6; */

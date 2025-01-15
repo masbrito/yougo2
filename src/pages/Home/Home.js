@@ -32,6 +32,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useRef } from 'react';
+import { ListCircle } from "styled-icons/ionicons-sharp";
+import { Type } from "styled-icons/bootstrap";
 
 const capas = [capa1, capa2, capa3, capa4, capa5, capa6]
 
@@ -170,9 +172,12 @@ export default function Home() {
 
                     <div className="card">
                         <h3>PLANO ANUAL</h3>
+                        <div className="promocao">
+                            <p style={{ fontSize: "20px" }}><s>de R$:239,90</s></p>
+                        </div>
                         <div className='left'>
-                            <span className='currency'>R$:</span>
-                            <h1 className='center'>79,90</h1>
+                            <span className='currency'>por R$:</span>
+                            <h1 className='center'>49,90</h1>
                             <span className='right'>/Mês</span>
                         </div>
 
@@ -204,6 +209,19 @@ export default function Home() {
                     </div>
                 </div>
             </Plans>
+
+            <Text>
+                <div className="precoprodutos">
+
+                    <ul className="lista">
+                        <li>Garrafa térmica R$:79,90</li>
+                        <li>Fone de ouvido R$:239,90</li>
+                        <li>Copo térmico R$:79,90</li>
+                        <li>Caixa de som R$:149,90</li>
+                        <li>Mochila R$:299,90</li>
+                    </ul>
+                </div>
+            </Text>
 
             <Doubts>
                 <h1>Dúvidas</h1>
