@@ -228,7 +228,7 @@ export default function Home() {
                 <CardDropdownComp title={"O que é a You Go?"} description={"Somos um super aplicativo para te impulsionar a ir mais longe. Nosso objetivo é ver você aprimorando as suas habilidades. Para isso reunimos vários cursos na nossa plataforma, resenhas dos livros mais aclamados do mundo, para você ler e ouvir de onde estiver, e um compilado de e-books incríveis ao alcance da sua mão."} />
                 <CardDropdownComp title={"Como tenho acesso a You Go?"} description={"Assine o plano visitando uma de nossas lojas. Entre com seu usuário utilizando a opção You Go como parceiro. Acesse a loja de aplicativos do seu celular e baixe os APPs. Leia livros, revistas, quadrinhos e pratique os melhores treinos."} />
                 <CardDropdownComp title={"Por que eu devo assinar a You Go?"} description={"Porque nós vamos te ajudar a chegar no seu objetivo: Ser produtivo e ser independente para aprender novas habilidades de qualquer lugar do mundo. Tempo é vida! E é isso que queremos que você tenha."} />
-                <CardDropdownComp title={"Como funciona nossos planos?"} description={"Por apenas R$: 98,90 mensais você tem acesso a todo o conteúdo por 1 ano e suporte especializado."} />
+                <CardDropdownComp title={"Como funciona?"} description={"Após a contratação do plano escolhido, você terá acesso a todos os conteúdos do aplicativo no seu celular, com conexão à internet, sem custo adicional durante o período contratado. Explore diversas categorias, descubra novos títulos e aproveite sua biblioteca onde e quando quiser."} />
             </Doubts>
 
             <Avaliation>
