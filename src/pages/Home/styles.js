@@ -112,11 +112,13 @@ export const Proposal = styled.div`
     text-align: center;
     align-items: center;
     width: 70%;
-    margin: 0 auto;    
+    margin: 0 auto;
+    font-size: 20px;    
 
     @media (max-width: 768px) {
         width: 100%;
         padding: 0px;
+        font-size: 12px;
     }
         
 
@@ -199,7 +201,7 @@ export const Proposal = styled.div`
             }
         }
         .mockup{
-            width: 100%;
+            width: 80%;
             padding: 0px;
             margin: 0 auto;
         } 
@@ -210,7 +212,7 @@ export const Proposal = styled.div`
 
 export const How = styled.div`
     background-image: linear-gradient(to bottom, #9300A0, #CB20DA);
-    width: 60%;      
+    width: 56%;      
     border-radius: 15px;
     margin: 0 auto;
     padding: 10px 50px;

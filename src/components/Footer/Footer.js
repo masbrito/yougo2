@@ -45,23 +45,12 @@ export default function Footer() {
             <div className="inferior">
                 <img src={logo_reduzida} alt="Logo YouGO!" className="logo-reduzida" />
                 <div className="centroInferior">
-                    <a href="https://www.facebook.com/profile.php?id=100088731307287&mibextid=LQQJ4d"><FiFacebook style={{ width: "15%", color: "#000000", margin: "5px" }} /></a>
-                    <a href="https://www.instagram.com/yougoappoficial/?hl=pt-br"><FaInstagram style={{ width: "15%", color: "#000000", margin: "5px" }} /></a>
-                    <a href="http://bit.ly/3WS5YU8"><FaWhatsapp style={{ width: "15%", color: "#000000", margin: "5px" }} /></a>
-                    <a href="https://www.threads.net/@yougoappoficial?igshid=MzRlODBiNWFlZA=="><FaThreads style={{ width: "15%", color: "#000000", margin: "5px" }} /></a>
-
-
-                    {/*<a href="/"><img src={icon_facebook} alt="Icone" /></a>
-                    <a href="/"><img src={icon_instagram} alt="Icone" /></a>
-                    <a href="/"><img src={icon_whats} alt="Icone" /></a>*/}
-
-
-                    {/*<a href="https://www.facebook.com/profile.php?id=100088731307287&mibextid=LQQJ4d"><img src={icon_facebook} alt="Icone" width="20" height="20"  /></a>
-                    <a href="https://www.instagram.com/yougoappoficial/?hl=pt-br"><img src={icon_instagram} alt="Icone" width="20" height="20"/></a>
-                    <a href="http://bit.ly/3WS5YU8"><img src={icon_whats} alt="Icone" width="20" height="20" /></a>
-                    <a href="https://www.threads.net/@yougoappoficial?igshid=MzRlODBiNWFlZA=="><img src={threads} alt="Icone" width="20" height="20"/></a>*/}
-
+                    <a href="https://www.facebook.com/profile.php?id=100088731307287&mibextid=LQQJ4d"><FiFacebook style={{ color: "#000000", margin: "5px" }} /></a>
+                    <a href="https://www.instagram.com/yougoappoficial/?hl=pt-br"><FaInstagram style={{ color: "#000000", margin: "5px" }} /></a>
+                    <a href="http://bit.ly/3WS5YU8"><FaWhatsapp style={{ color: "#000000", margin: "5px" }} /></a>
+                    <a href="https://www.threads.net/@yougoappoficial?igshid=MzRlODBiNWFlZA=="><FaThreads style={{ color: "#000000", margin: "5px" }} /></a>
                 </div>
+                
                 <div>
                     <a href="/termos-de-uso">Termos de Uso </a>
                     <a href="/politica-de-privacidade">| Política de Privacidade</a>

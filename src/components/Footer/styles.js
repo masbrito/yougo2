@@ -72,13 +72,20 @@ export const FooterD = styled.footer`
             }
         }
     }
+    .centroInferior {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os ícones */
+}
 
     .inferior {
         background-color: #D0D0D0;
+        flex-direction: column;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 25px;
+        padding: 10px;
         
 
         @media (max-width: 768px) {
