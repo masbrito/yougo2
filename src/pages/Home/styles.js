@@ -34,10 +34,7 @@ export const Modal = styled.div`
     .swiper{
         max-width: 90%;
         padding: 20px 5px;    
-             
-        
-        
-    }   
+        }   
 
     img {
         border-radius: 15px;
@@ -123,12 +120,12 @@ export const Proposal = styled.div`
         
 
     .icons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    grid-template-columns: repeat(1, 1fr);
     gap: 15px;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 87%;
     margin: 0 auto;
     padding: 20px 0px;
     background-color: #ffffff;
@@ -307,6 +304,12 @@ export const Text = styled.div`
     margin 0 auto;
     
   }
+
+  h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
   .slide{
     width: 40%;
     @media (max-width: 768px){
@@ -326,7 +329,22 @@ export const Text = styled.div`
   .custom-slide{
     transition: background-color 0.3s ease;
   }
-    
+    .swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+  opacity: 1;
+}
 
     .item{
         width: 70%;
@@ -660,19 +678,6 @@ export const Avaliation = styled.div`
             }
         }
 
-        /* .card {
-            width: 40%;
-            box-shadow: 4px 4px 4px rgba(0,0,0,.25);
-            border-radius: 20px;
-            padding: 10px 20px;
-
-            @media (max-width: 768px) {
-                margin-top: 5px;
-
-                .stars {
-                    width: 45%;
-                }
-            }
-        } */
+        
     }
 `;

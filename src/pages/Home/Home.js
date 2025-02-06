@@ -30,7 +30,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import "swiper/css/effect-fade";
+import { Autoplay, Pagination, EffectFade  } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { useState, useRef } from 'react';
 import { ListCircle } from "styled-icons/ionicons-sharp";
 import { Type } from "styled-icons/bootstrap";
@@ -52,11 +55,15 @@ export default function Home() {
                 <div className="swiper">
                     <h1>Desfrute conhecimento ilimitado</h1>
                     <p>Tenha acesso a um acervo digital com +10.000 conteúdos!</p>
-                    <Swiper className='slide'
+                    <Swiper 
+                        className='slide'
                         slidesPerView={1}
                         pagination={{ clickable: true }}
-                        navigation
                         autoplay={{ delay: 2000 }}
+                        modules={[Autoplay, Pagination, EffectFade]}
+                        speed={2000}
+                        
+
                     >
                         <SwiperSlide>
                             <img src={Livros} alt="Livros" className='item' />
