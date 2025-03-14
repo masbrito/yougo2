@@ -167,25 +167,10 @@ export default function Home() {
                 <h1 className="title">Conhecimento digital para o mundo real!</h1>
                 <div className="container">
                     <div className="card">
-                        <h3>PLANO SEMESTRAL</h3>
+                    <h3></h3>
                         <div className='left'>
                             <span className='currency'>R$:</span>
-                            <h1 className='center'>69,90</h1>
-                            <span className='right'>/Mês</span>
-                        </div>
-
-                        <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 6 meses.</p>
-                        <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
-                    </div>
-
-                    <div className="card">
-                        <h3>PLANO ANUAL</h3>
-                        <div className="promocao">
-                            <p style={{ fontSize: "20px" }}><s>de R$:239,90</s></p>
-                        </div>
-                        <div className='left'>
-                            <span className='currency'>por R$:</span>
-                            <h1 className='center'>49,90</h1>
+                            <h1 className='center'>79,90</h1>
                             <span className='right'>/Mês</span>
                         </div>
 
@@ -194,10 +179,25 @@ export default function Home() {
                     </div>
 
                     <div className="card">
-                        <h3>18 MESES</h3>
+                        <h3></h3>
+                        <div className="promocao">
+                            <p style={{ fontSize: "20px" }}><s>de R$:239,90</s></p>
+                        </div>
+                        <div className='left'>
+                            <span className='currency'>por R$:</span>
+                            <h1 className='center'>89,90</h1>
+                            <span className='right'>/Mês</span>
+                        </div>
+
+                        <p><Check width="30px" style={{ color: "#fff" }} />Acesso por 1 ano e 3 meses.</p>
+                        <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
+                    </div>
+
+                    <div className="card">
+                        <h3></h3>
                         <div className='left'>
                             <span className='currency'>R$:</span>
-                            <h1 className='center'>89,90</h1>
+                            <h1 className='center'>99,90</h1>
                             <span className='right'>/Mês</span>
                         </div>
 
@@ -205,10 +205,10 @@ export default function Home() {
                         <p><Check width="30px" style={{ color: "#fff" }} />Suporte especializado.</p>
                     </div>
                     <div className="card">
-                        <h3>PLANO BIANUAL</h3>
+                        <h3></h3>
                         <div className='left'>
                             <span className='currency'>R$:</span>
-                            <h1 className='center'>99,90</h1>
+                            <h1 className='center'>119,90</h1>
                             <span className='right'>/Mês</span>
                         </div>
 
