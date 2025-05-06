@@ -6,8 +6,9 @@ export const Container = styled.div`
 
 export const Image = styled.div`
     img {
-        margin: 10px 0px;
-        width: 100%;
+        display: block;
+        margin: 0px auto;
+        width: 50%;
         height: 100%;
     }
 `;

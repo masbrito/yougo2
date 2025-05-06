@@ -13,9 +13,11 @@ export default function Header() {
             </div>
             <div className="links">
                 <Link to="/">INÍCIO</Link>
+                <Link to="/about">SOBRE NÓS</Link>
                 <Link to="/contact">CONTATO</Link>
                 <Link to="/tutorial-access">TUTORIAL</Link>
                 <Link to="/password">VOUCHER</Link>
+               
             </div>
         </HeaderD>
     );
