@@ -147,7 +147,7 @@ export const Images = styled.div`
     }
 
     .text {
-        /* padding: 10px; */
+         padding: 10px; 
 
         .major {
             width: 80%;

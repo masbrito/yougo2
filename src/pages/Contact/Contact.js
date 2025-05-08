@@ -67,7 +67,7 @@ export default function Contact() {
                     </div>
                 </Cards>
 
-                <Forms onSubmit={handleSignupForm}>
+                {/*<Forms onSubmit={handleSignupForm}>
                     <div className="card">
                         <h2>Formulário de Contato</h2>
                         <div className="info">
@@ -97,7 +97,7 @@ export default function Contact() {
                         
                         <button onClick={handleSignupForm} type="submit"> ENVIAR </button>
                     </div>
-                </Forms>
+                </Forms> */}
 
                 <Images>
                     <div className="text">
