@@ -68,7 +68,7 @@ export const FooterD = styled.footer`
             }
 
             img {
-                width: calc(100% / 3);
+                width: calc(100% / 5);
             }
         }
     }

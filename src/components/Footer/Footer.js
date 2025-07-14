@@ -24,7 +24,7 @@ export default function Footer() {
                 <div className="centroSuperior">
                     <h3>Navegação do Site</h3>
                     <nav>
-                        <a href="/">Início</a><br />
+                        <a href="/">Início</a><br />npm
                         <a href="/about">Sobre Nós</a><br />
                         <a href="/contact">Contato</a><br />
                         <a href="/tutorial-access">Tutorial de Acesso</a><br />
