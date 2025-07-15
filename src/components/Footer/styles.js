@@ -55,10 +55,11 @@ export const FooterD = styled.footer`
         }
 
         .esquerdaSuperior {
-            text-align: center;         
+            text-align: center;           
                    
             a {
                 display: inline-block;  
+                margin: 0 5px;
             }
             
             h3 {
@@ -69,12 +70,8 @@ export const FooterD = styled.footer`
             
             p {
                 margin-bottom: 5px;
-                color: #fff;
-            }
-
-            img {                
-                max-width: 100%;                              
-            }
+                color: #fff;                
+            }          
         }
     }
     .centroInferior {
