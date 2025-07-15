@@ -8,7 +8,7 @@ export const FooterD = styled.footer`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 25px;
+        padding: 15px 15px;
         color: #fff;
 
         @media (max-width: 768px) {
@@ -55,20 +55,25 @@ export const FooterD = styled.footer`
         }
 
         .esquerdaSuperior {
-            text-align: center;
+            text-align: center;         
+                   
+            a {
+                display: inline-block;  
+            }
             
-
             h3 {
                 margin-bottom: 10px;
                 color: #fff;
             }
+
+            
             p {
                 margin-bottom: 5px;
                 color: #fff;
             }
 
-            img {
-                width: calc(100% / 4);
+            img {                
+                max-width: 100%;                              
             }
         }
     }

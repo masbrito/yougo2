@@ -24,7 +24,7 @@ export default function Footer() {
                 <div className="centroSuperior">
                     <h3>Navegação do Site</h3>
                     <nav>
-                        <a href="/">Início</a><br />npm
+                        <a href="/">Início</a><br />
                         <a href="/about">Sobre Nós</a><br />
                         <a href="/contact">Contato</a><br />
                         <a href="/tutorial-access">Tutorial de Acesso</a><br />
@@ -33,12 +33,10 @@ export default function Footer() {
                 </div>
                 <div className="esquerdaSuperior">
                     <h3>Informações para Contato</h3>
-                    <p style={{ fontWeight: 500 }}>(11) 91555-5376</p>
+                 <p style={{ fontWeight: 500 }}>(11) 91555-5376</p>
                     <p style={{ fontWeight: 500 }}>atendimentoaocliente@yougoapp.com.br</p>
-                    <p style={{ fontSize: 11 }}>Já é um associado? Baixe nosso app.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.yougo">
-                        <img src={google_play} alt="Imagem" />
-                    </a>
+                    <p style={{ fontSize: 11 }}>Já é um associado? Baixe nosso app.</p>                    
+                    <a href="https://play.google.com/store/apps/details?id=com.yougo"><img src={google_play} alt="Imagem" /></a>
                     <a href="https://apps.apple.com/br/app/yougo-app/id6457107951"><img src={app_store} alt="Imagem" /></a>
                 </div>
             </div>
