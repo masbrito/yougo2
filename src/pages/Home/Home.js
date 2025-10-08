@@ -98,7 +98,7 @@ export default function Home() {
                     </div>
                     <div className="card-text">
                         <img src={Audiobook} alt="Audiobook" className="icon" />
-                        <h3>+ 1.600<br></br>AUDIOLIVROS</h3>
+                        <h3>+ 1.800<br></br>AUDIOLIVROS</h3>
                     </div>
                     <div className="card-text">
                         <img src={Course} alt="Cursos" className="icon" />
