@@ -244,17 +244,17 @@ export default function Home() {
                 <div className="container-card">
                     <div className="card">
                         <img src={client} alt="Cliente" />
-                        <h2>Julia</h2>
+                        <h2>Vitor</h2>
                         <h3>Assinante a 6 meses.</h3>
                         <img className="stars" src={star_icon} alt="Estrelas" />
                         <p> Impressionante como a plataforma é dinâmica e fácil de usar. Consigo consumir muito conteúdo em pouquissímo tempo. Já aprendi várias habilidades com os cursos e estou amando! </p>
                     </div>
                     <div className="card">
                         <img src={clientSecond} alt="Cliente" />
-                        <h2>Victor</h2>
+                        <h2>Julia</h2>
                         <h3>Assinante a 1 ano.</h3>
                         <img className="stars" src={star_icon} alt="Estrelas" />
-                        <p> Eu sou apaixonado pelas resenhas críticas, a facilidade de ouvir de qualquer lugar me encantou! Encontro resenha de vários best sellers que estavam na minha lista de livros, porém não conseguia ler por falta de tempo!</p>
+                        <p> Eu sou apaixonada pelas resenhas críticas, a facilidade de ouvir de qualquer lugar me encantou! Encontro resenha de vários best sellers que estavam na minha lista de livros, porém não conseguia ler por falta de tempo!</p>
                     </div>
                 </div>
             </Avaliation>
